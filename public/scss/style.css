@@ -1,0 +1,198 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9375rem;
+}
+
+.wrapper {
+  min-width: 23.4375rem;
+  max-width: 90rem;
+  min-height: 100vh;
+  padding: 5.75rem 1.875rem;
+  background-color: #fafafa;
+}
+
+@media (min-width: 87.5em) {
+  .wrapper {
+    padding: 1.9375rem 9.75rem;
+  }
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.3125rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+.container__top {
+  text-align: center;
+  max-width: 32rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 40em) {
+  .container__top {
+    margin: 0 auto 4.375rem;
+  }
+}
+
+.container__para1 {
+  font-size: 1.3125rem;
+  color: #a3a5ae;
+}
+
+@media (min-width: 64em) {
+  .container__para1 {
+    font-size: 1.75rem;
+  }
+}
+
+.container__heading {
+  color: #4c4e61;
+  margin-bottom: 1.15rem;
+}
+
+.container__para {
+  color: #a3a5ae;
+}
+
+@media (max-width: 39.9375em) {
+  .container__para {
+    font-size: 0.8125rem;
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.container__bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 1.375rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 40em) {
+  .container__bottom {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "card1 card2" "card3 card4";
+    gap: 1.75rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .container__bottom {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "card1 card2 card4" "card1 card3 card4";
+  }
+}
+
+.container .card {
+  min-height: 15rem;
+  background-color: #fafafa;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  padding: 1.875rem;
+  -webkit-box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.05), -2px 0 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.05), -2px 0 15px rgba(0, 0, 0, 0.05);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.container .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.container .card.card1 {
+  border-top: 3px solid #45d3d3;
+}
+
+@media (min-width: 40em) {
+  .container .card.card1 {
+    grid-area: card1;
+  }
+}
+
+.container .card.card2 {
+  border-top: 3px solid #ea5353;
+}
+
+@media (min-width: 40em) {
+  .container .card.card2 {
+    grid-area: card2;
+  }
+}
+
+.container .card.card3 {
+  border-top: 3px solid #fcaf4a;
+}
+
+@media (min-width: 40em) {
+  .container .card.card3 {
+    grid-area: card3;
+  }
+}
+
+.container .card.card4 {
+  border-top: 3px solid #549ef2;
+}
+
+@media (min-width: 40em) {
+  .container .card.card4 {
+    grid-area: card4;
+  }
+}
+
+.container .card__heading {
+  color: #4c4e61;
+  margin-bottom: 0.875rem;
+}
+
+.container .card__para {
+  color: #a3a5ae;
+  font-size: 0.875rem;
+}
+
+.container .card__image {
+  width: 3.75rem;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(-1.875rem, -1.875rem);
+          transform: translate(-1.875rem, -1.875rem);
+}
+/*# sourceMappingURL=style.css.map */

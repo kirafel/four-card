@@ -1,0 +1,132 @@
+.container {
+    // Top section of the container
+    &__top {
+        text-align: center;
+
+        max-width: 32rem;
+        margin-bottom: 5rem;
+
+        @include breakpoint-up(medium) {
+            margin: 0 auto 4.375rem;
+        }
+    }
+    
+    &__para1 {
+        font-size: 1.3125rem;
+        @include breakpoint-up(large) {
+            font-size: $font-lg;
+        }
+
+        color: $GrayisBlue;
+    }
+
+    &__heading {
+        color: $VeryDarkBlue;
+        margin-bottom: 1.15rem;
+    }
+
+    &__para {
+        @include breakpoint-down(small) {
+            font-size: 0.8125rem;
+            width: 85%;
+            margin: 0 auto;
+        }
+        color: $GrayisBlue;;
+    }
+
+    // Bottom section of the container 
+    &__bottom {
+        // Grid for mobile
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 1.375rem;
+
+        // Grid for tablet
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+            "card1 card2"
+            "card3 card4";
+            gap: 1.75rem;
+        }
+
+        // Grid for desktop
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "card1 card2 card4"
+            "card1 card3 card4";
+        }
+
+        align-items: center;
+
+    }
+
+    .card {
+        min-height: 15rem;
+        background-color: $VeryLightGray;
+        border-radius: 5px;
+        overflow: hidden;
+
+        position: relative;
+
+        padding: 1.875rem;
+
+        box-shadow: 2px 15px 15px rgba(0,0,0,0.05),
+        -2px 0 15px rgba(0,0,0,0.05);
+        transition: transform 200ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &.card1 {
+            border-top: 3px solid $Cyan;
+            @include breakpoint-up(medium) {
+                grid-area: card1;
+            }
+        }
+        &.card2 {
+            border-top: 3px solid $Red;
+            @include breakpoint-up(medium) {
+                grid-area: card2;
+            }
+        }
+        &.card3 {
+            border-top: 3px solid $Orange;
+            @include breakpoint-up(medium) {
+                grid-area: card3;
+            }
+        }
+        &.card4 {
+            border-top: 3px solid $Blue;
+            @include breakpoint-up(medium) {
+                grid-area: card4;
+            }
+        }
+
+        &__heading {
+            color: $VeryDarkBlue;
+            margin-bottom: 0.875rem;
+        }
+
+        &__para {
+            color: $GrayisBlue;
+            font-size: $font-vsm;
+        }
+
+        &__image {
+            width: 3.75rem;
+
+            display: inline-block;
+            position: absolute;
+            
+            right: 0;
+            bottom: 0;
+            transform: translate(-1.875rem, -1.875rem);
+        }
+    }
+}
